@@ -1,6 +1,6 @@
 .init-hidden {
     opacity: 0;
-    transition: 2s linear;
+    transition: 1s linear;
 }
 .init-hidden-off {
     opacity: 1;
