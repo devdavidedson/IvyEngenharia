@@ -1,4 +1,10 @@
-
+.init-hidden {
+    opacity: 0;
+    transition: 2s linear;
+}
+.init-hidden-off {
+    opacity: 1;
+}
 @-webkit-keyframes focus-in-contract {
 0% {
     letter-spacing: 1em;
