@@ -11,5 +11,5 @@ const observer = new IntersectionObserver(entries => {
 })
 
 Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
-    observer.observe(document.querySelector('.init-hidden'))   
-})
+    observer.observe(element)   
+});
