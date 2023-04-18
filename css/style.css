@@ -56,8 +56,7 @@
 }
 body {
     font-family: 'Material';
-    font-weight: 400;
-    background-image: url('../image/card-2-service.png');
+    font-weight: 300;
 }
 header {
     display: flex;
@@ -98,14 +97,7 @@ header {
     margin-top: 15px;
     margin-right: 20px;
 }
-.nav__links span {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 35px;
-    margin-right: 20px;
-    color: #678276;
 
-}
 .nav__logo img {
     max-width: 100%;
     height: auto;
@@ -222,7 +214,7 @@ margin-left: 100px;
 .sec_services-bar {
     width: 100%;
     height: 25vh;
-    background-color: var(--color-Mazul);
+    background-color: var(--color-azul);
     color: white;
     font-size: 60px;
     font-weight: 400;
@@ -455,7 +447,6 @@ margin-left: 100px;
 .section__header img {
     width: 100%;
     align-self: center;
-
 }
 .section__text {
     width: 55%;
@@ -502,4 +493,63 @@ margin-left: 100px;
 .join__text :nth-child(2) {
     font-size: 2rem;
     color: #FFF;
+}
+
+/* CONTATO */
+
+.polygon {
+    display: flex;
+    widows: 100%;
+    max-width: 100%;
+    height: 95vh;
+    background-image: url(../image/luan-estacao.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(1% 1%, 99% 1%,99% 83%, 1% 94%,1% 1%);
+    margin-top: 2rem;
+    margin-bottom: -4rem;
+}
+.contato {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: var(--color-verde);
+    opacity: 0.9;
+}
+.form{
+
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    widows: 100%;
+    max-width: 100%;
+    height: 25vh;
+    max-height: 100%;
+    display: flex;
+    background-color: var(--color-azul);
+    clip-path: polygon(0% 40%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.footer__icons {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain;
+    flex-direction: row;
+    margin: auto;
+    padding: 50px;
+}
+.footer__icons img {
+    max-width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 30px;
 }
