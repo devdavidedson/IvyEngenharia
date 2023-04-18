@@ -90,9 +90,19 @@
 
     <div class="polygon">
         <div class="contato">
-            <form class="form" action="POST">
+            <div class="form">
+                <form autocomplete="off" class="form__area" action="POST">
+                    <input type="text" name="name" placeholder="Nome">
+                    <input type="text" name="email" placeholder="Digite seu Email">
+                    <input type="text" name="subject" placeholder="Assunto">
+                    <textarea name="message" id="contato" cols="10" rows="5"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
 
-            </form>
+            <div class="form__img">
+                <img src="image/img-samBiz.jpg" alt="Image Topografia Mensurar">
+            </div>
         </div>
     </div>
 
