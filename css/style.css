@@ -43,40 +43,7 @@
     opacity: 1;
 }
 }
-/* cover-image */
-@-webkit-keyframes kenburns-top {
-    0% {
-      -webkit-transform: scale(1) translateY(0);
-              transform: scale(1) translateY(0);
-      -webkit-transform-origin: 50% 16%;
-              transform-origin: 50% 16%;
-    }
-    100% {
-      -webkit-transform: scale(1.25) translateY(-15px);
-              transform: scale(1.25) translateY(-15px);
-      -webkit-transform-origin: top;
-              transform-origin: top;
-    }
-  }
-  @keyframes kenburns-top {
-    0% {
-      -webkit-transform: scale(1) translateY(0);
-              transform: scale(1) translateY(0);
-      -webkit-transform-origin: 50% 16%;
-              transform-origin: 50% 16%;
-    }
-    100% {
-      -webkit-transform: scale(1.018) translateY(0);
-              transform: scale(1.018) translateY(0);
-      -webkit-transform-origin: top;
-              transform-origin: top;
-    }
-  }
-  
-.kenburns-top {
-	-webkit-animation: kenburns-top 1s linear both;
-	animation: kenburns-top 1s linear both;
-}
+
 .focus-in-contract {
 	-webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -287,8 +254,9 @@ margin-left: 100px;
 }
 
 .sec_services-cards {
+    display:flex;
     width: 100%;
-    height: 100%;
+    height: 75vh;
     display: flex;
     flex-direction: row;
 }
@@ -311,8 +279,7 @@ margin-left: 100px;
 .card-1:hover {
     background-image: url(../image/hover/1.jpg);
     border: 5px solid #fff;
-    -webkit-animation: kenburns-top 1s linear both;
-	animation: kenburns-top 1s linear both;
+    transition: 0.3s ease-out;
 }
 
 .card-2 {
@@ -332,8 +299,7 @@ margin-left: 100px;
 .card-2:hover {
     background-image: url(../image/hover/2.jpg);
     border: 5px solid #fff;
-    -webkit-animation: kenburns-top 1s linear both;
-	animation: kenburns-top 1s linear both;
+    transition: 0.3s ease-out;
 }
 
 .card-3 {
@@ -344,17 +310,19 @@ margin-left: 100px;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px;
-    background-image: url(../image/card-1-service.png);
+    background-image: url(../image/card-3.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+.card-3 :nth-child(2) {
+    font-size: 1.7em;
+}
 
 .card-3:hover {
-    background-image: url(../image/hover/3.jpg);
+    background-image: url(../image/card-3-2.png);
     border: 5px solid #fff;
-    -webkit-animation: kenburns-top 1s linear both;
-	animation: kenburns-top 1s linear both;
+    transition: 0.3s linear;
 }
 
 .card-4 {
@@ -365,17 +333,19 @@ margin-left: 100px;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px;
-    background-image: url(../image/card-2-service.png);
+    background-color: var(--color-Mverde);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center; 
+}
+.card-4 :nth-child(2) {
+    font-size: 1.7em;
 }
 
 .card-4:hover {
     background-image: url(../image/hover/4.jpg);
     border: 5px solid #fff;
-    -webkit-animation: kenburns-top 1s linear both;
-	animation: kenburns-top 1s linear both;
+    transition: 0.3s linear;
 }
 .line {
     width: 30%;
@@ -393,14 +363,15 @@ margin-left: 100px;
     color: white;
     padding-left: 15px;
 }
+
 .texto {
-    text-align: left;
     font-size: 18px;
     font-weight: 600;
     color: white;
-    margin-top: auto;
-    padding-bottom: 50px;
     font-weight: 300;
+    margin-top: 50px;
+    overflow: hidden;
+
 }
 
 /* quem somos */
