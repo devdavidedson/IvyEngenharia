@@ -507,6 +507,7 @@ margin-left: 100px;
     clip-path: polygon(1% 1%, 99% 1%,99% 83%, 1% 94%,1% 1%);
     margin-top: 2rem;
     margin-bottom: -4rem;
+    background-image: url(../image/luan-estacao.png);
 }
 .contato {
     display: flex;
@@ -514,10 +515,20 @@ margin-left: 100px;
     max-width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 10;
-    background-color: var(--color-Mverde);
-    opacity: 0.9;
+    z-index: 1;
 }
+.contato::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: var(--color-Mverde);
+  }
 .form{
     width: 50%;
     height: 100%;
@@ -526,12 +537,12 @@ margin-left: 100px;
 
 .form__area{
     display: flex;
-    width: 50%;
+    width: 60%;
     height: 100%;
     justify-content: center;
     flex-direction: column;
     margin: auto;
-    gap: 20px;
+    gap: 25px;
 }
 .form__area input{
     padding: 10px;
@@ -569,9 +580,30 @@ margin-left: 100px;
 }
 
 .form__img {
-    width: 50%;
+    width: 60%;
     height: 100%;
     float: right;
+}
+.form__img .bgc-1 {
+    display: flex;
+    position: absolute;
+    background-color: var(--color-azul);
+    width: 60%;
+    max-width: 100%;
+    height: 100%;
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 15% 100%);
+    z-index: 999;
+}
+.form__img .bgc-2 {
+    display: flex;
+    position: absolute;
+    background-color: var(--color-verde);
+    width: 60%;
+    max-width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    margin-left: 3rem;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .form__img img {
     position: absolute;
@@ -583,7 +615,7 @@ margin-left: 100px;
     align-self: center;
     padding: 30px 0 30px 30px;
     clip-path: polygon(0% 0%, 100% 0%,100% 90%, 0% 94%,0% 0%);
-   
+    opacity: 0.6;
 }
 
 
