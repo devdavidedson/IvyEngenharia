@@ -134,13 +134,16 @@ nav a {
 list-style: none;
 margin-left: 100px;
 }
+
+/* SLIDE */
+
 .slideshow {
     position: relative;
     width: 100%;
     height: 400px;
-  }
+}
   
-  .slide {
+.slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -148,19 +151,19 @@ margin-left: 100px;
     height: 400px;
     opacity: 0;
     transition: opacity 0.5s ease;
-  }
+}
   
-  .slide.active {
+.slide.active {
     opacity: 1;
-  }
+}
   
-  .slide img {
+.slide img {
     width: 100%;
     height: 400px;
     object-fit: cover;
-  }
+}
   
-  .slide-text {
+.slide-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -168,44 +171,50 @@ margin-left: 100px;
     text-align: center;
     color: #fff;
     z-index: 1;
-  }
+}
   
-  .slide-text h2 {
+.slide-text h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-  }
+}
   
   .slide-text p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-  }
+}
   
-  .prev,
-  .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
+    width: 70px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
+    background-color: var(--color-verde);
     font-size: 2rem;
     border: none;
     outline: none;
     cursor: pointer;
     z-index: 2;
-  }
+}
+
   
-  .prev {
+.prev {
     left: 0;
-  }
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
   
-  .next {
+.next {
     right: 0;
-  }
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
   
 
-/* serviços */
+/* SERVICES - CARDS */
 
 .sec_services {
     width: 100%;
@@ -236,15 +245,19 @@ margin-left: 100px;
 }
 
 
-.card-1 {
-    width: 100%;
+.card-1, 
+.card-2, 
+.card-3, 
+.card-4, 
+.card-5 {
+    width: 20%;
+    max-width: 100%;
     max-height: 100%;
     flex-direction: column;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px;
-    background-image: url(../image/card-1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -256,64 +269,16 @@ margin-left: 100px;
     transition: 0.3s ease-out;
 }
 
-.card-2 {
-    width: 100%;
-    max-height: 100%;
-    flex-direction: column;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 10px;
-    background-image: url(../image/card-2-service.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 .card-2:hover {
     background-image: url(../image/hover/2.jpg);
     border: 5px solid #fff;
     transition: 0.3s ease-out;
 }
 
-.card-3 {
-    width: 100%;
-    max-height: 100%;
-    flex-direction: column;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 10px;
-    background-image: url(../image/card-3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.card-3 :nth-child(2) {
-    font-size: 1.7em;
-}
-
 .card-3:hover {
     background-image: url(../image/card-3-2.png);
     border: 5px solid #fff;
     transition: 0.3s linear;
-}
-
-.card-4 {
-    width: 100%;
-    max-height: 100%;
-    flex-direction: column;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 10px;
-    background-color: var(--color-Mverde);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center; 
-}
-.card-4 :nth-child(2) {
-    font-size: 1.7em;
 }
 
 .card-4:hover {
