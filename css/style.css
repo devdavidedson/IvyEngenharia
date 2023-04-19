@@ -134,72 +134,76 @@ nav a {
 list-style: none;
 margin-left: 100px;
 }
-.sec_slide {
+.slideshow {
     position: relative;
     width: 100%;
-    height: 75vh;
-    border-radius: 0px 15px 0px 0px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.sec__slide-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    height: 400px;
+  }
+  
+  .slide {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sec__slide-list li {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 400px;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.sec__slide-list li:first-child {
+    transition: opacity 0.5s ease;
+  }
+  
+  .slide.active {
     opacity: 1;
-}
-
-.sec__slide-text {
-    width: 70%;
-    height: 75vh;
-    text-align: right;
-    padding: 30px;
-    background-color: var(--color-Mverde);
-    color: white;
-    opacity: 0.8;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.sec__slide-text h1 {
-    font-size: 3.5vw;
-    margin-top: 15px;
-    margin-left: 50px;
-    padding: 20px;
-    font-weight: 300;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    display: inline-block;
-    line-height: 1.5;
-}
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .slide-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .slide-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
 
 /* serviços */
 

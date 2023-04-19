@@ -14,13 +14,26 @@ Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
     observer.observe(element)   
 });
 
-const slideList = document.querySelector('.sec__slide-list');
-const slides = slideList.querySelectorAll('li');
-let currentSlide = 0;
-let slideInterval = setInterval(nextSlide, 5000);
+var slides = document.querySelectorAll(".slide");
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide, 5000); // movimento automático a cada 5 segundos
+
+function showSlide(n) {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (n + slides.length) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+
+function prevSlide() {
+  clearInterval(slideInterval);
+  showSlide(currentSlide - 1);
+  slideInterval = setInterval(nextSlide, 5000);
+}
 
 function nextSlide() {
-  slides[currentSlide].style.opacity = 0;
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].style.opacity = 1;
+  clearInterval(slideInterval);
+  showSlide(currentSlide + 1);
+  slideInterval = setInterval(nextSlide, 5000);
 }
+
+showSlide(currentSlide);

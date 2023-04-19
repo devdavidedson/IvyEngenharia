@@ -33,17 +33,33 @@
             </div>
         </div>
     </header>
-        <div class="sec_slide">
-            <ul class="sec__slide-list">
-                <li style="background-image: url(../image/luan-estacao.png)"></li>
-                <li style="background-image: url(./image/hover/3.jpg)"></li>
-                <li><video autoplay="active" style="width: 100%; max-width: 100%; height: auto;" src="image/video/LuanSiteCAD.mp4"></video></li>
-            </ul>
-            <div class="sec__slide-text cut">
-                <h1>CONTE CONOSCO PARA SOLUÇÕES 
-                    EFICAZES EM PROJETOS DE ENGENHARIA.</h1>
+
+        <div class="slideshow">
+            <div class="slide active">
+            <img src="image/slide/luan-estacao.png">
+            <div class="slide-text">
+                <h2>Primeiro slide</h2>
+                <p>Descrição do primeiro slide.</p>
             </div>
-         </div>
+            </div>
+            <div class="slide">
+            <img src="image/background/bgc-green.png">
+            <div class="slide-text">
+                <h2>Segundo slide</h2>
+                <p>Descrição do segundo slide.</p>
+            </div>
+            </div>
+            <div class="slide">
+            <img src="image/background/bgc-onlygreen.png">
+            <div class="slide-text">
+                <h2>Terceiro slide</h2>
+                <p>Descrição do terceiro slide.</p>
+            </div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        
         <section id="whos">
             <div class="section__container">
                 <div class="section__container-left">
