@@ -245,13 +245,60 @@ margin-left: 100px;
 }
 
 
-.card-1, 
-.card-2, 
-.card-3, 
-.card-4, 
+.card-1 {
+    width: 20%;
+    max-height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    background-image: url(../image/cards/CARD-1-SERVICE.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+.card-2 {
+    width: 20%;
+    max-height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    background-image: url(../image/cards/CARD-2-SERVICE.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+.card-3 {
+    width: 20%;
+    max-height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    background-image: url(../image/cards/CARD-3-SERVICE.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} 
+.card-4 {
+    width: 20%;
+    max-height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    background-image: url(../image/cards/CARD-4-SERVICE.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .card-5 {
     width: 20%;
-    max-width: 100%;
     max-height: 100%;
     flex-direction: column;
     display: flex;
@@ -264,27 +311,27 @@ margin-left: 100px;
 }
 
 .card-1:hover {
-    background-image: url(../image/hover/1.jpg);
+    background-image: url(../image/cards/CARD-1-2-SERVICE.png);
     border: 5px solid #fff;
-    transition: 0.3s ease-out;
 }
 
 .card-2:hover {
-    background-image: url(../image/hover/2.jpg);
+    background-image: url(../image/cards/CARD-2-2-SERVICE.jpeg);
     border: 5px solid #fff;
-    transition: 0.3s ease-out;
 }
 
 .card-3:hover {
-    background-image: url(../image/card-3-2.png);
+    background-image: url(../image/cards/card-3-2.png);
     border: 5px solid #fff;
-    transition: 0.3s linear;
 }
 
 .card-4:hover {
-    background-image: url(../image/hover/4.jpg);
+    background-image: url(../image/cards/CARD-4-2-SERVICE.png);
     border: 5px solid #fff;
-    transition: 0.3s linear;
+}
+.card-5:hover {
+    background-image: url(../image/cards/CARD-5-2-SERVICE.png);
+    border: 5px solid #fff;
 }
 .line {
     width: 30%;
