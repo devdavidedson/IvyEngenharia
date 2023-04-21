@@ -1,3 +1,6 @@
+// EFEITO SMOOTH ANGULO Y
+
+
 const observer = new IntersectionObserver(entries => {
     // console.log(entries)
 
@@ -13,6 +16,27 @@ const observer = new IntersectionObserver(entries => {
 Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
     observer.observe(element)   
 });
+
+// EFEITO SMOOTH ANGULO X
+
+const observer2 = new IntersectionObserver(entries2 => {
+     console.log(entries2)
+
+    Array.from(entries2).forEach(entry2 => {
+        if (entry2.intersectionRatio >= 1) {
+            entry2.target.classList.add('init-hidden-off-X')
+        }
+    })
+}, {
+    threshold: [0, .5, 1]
+})
+
+Array.from(document.querySelectorAll('.init-hidden-X')).forEach( elementX => {
+    observer2.observe(elementX)   
+});
+
+
+// Slide Rotativo com Click
 
 var slides = document.querySelectorAll(".slide");
 var currentSlide = 0;

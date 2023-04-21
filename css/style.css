@@ -1,12 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Material';
+    font-weight: 300;
+    padding: 15px;
+}
+
 .init-hidden {
     opacity: 0;
-    transition: 1s linear;
+    transition: 2s linear;
     transform: translateY(30px);
 }
 .init-hidden-off {
     opacity: 1;
     transform: translateY(0);
 }
+
+.init-hidden-X {
+    opacity: 0;
+    transition: 1s linear;
+    transform: translateX(-30px);
+}
+.init-hidden-off-X {
+    opacity: 1;
+    transform: translateX(0);
+
+}
+
 .cut {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%,10% 50%, 0 0);
 }
@@ -48,16 +72,7 @@
     animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-body {
-    font-family: 'Material';
-    font-weight: 300;
-}
+
 header {
     display: flex;
     flex-direction: row;
@@ -247,24 +262,23 @@ margin-left: 100px;
 
 .card-1 {
     width: 20%;
+    max-width: 100%;
     max-height: 100%;
     flex-direction: column;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 10px;
     background-image: url(../image/cards/CARD-1-SERVICE.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 } 
+
 .card-2 {
     width: 20%;
+    max-width: 100%;
     max-height: 100%;
     flex-direction: column;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 10px;
     background-image: url(../image/cards/CARD-2-SERVICE.png);
     background-repeat: no-repeat;
@@ -273,24 +287,22 @@ margin-left: 100px;
 } 
 .card-3 {
     width: 20%;
+    max-width: 100%;
     max-height: 100%;
     flex-direction: column;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 10px;
-    background-image: url(../image/cards/CARD-3-SERVICE.png);
+    background-image: url(../image/cards/CARD-3-SERVIÇO.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 } 
 .card-4 {
     width: 20%;
+    max-width: 100%;
     max-height: 100%;
     flex-direction: column;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 10px;
     background-image: url(../image/cards/CARD-4-SERVICE.png);
     background-repeat: no-repeat;
@@ -299,39 +311,45 @@ margin-left: 100px;
 }
 .card-5 {
     width: 20%;
+    max-width: 100%;
     max-height: 100%;
     flex-direction: column;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 10px;
+    background-image: url(../image/cards/CARD-5-SERVICE.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
+/* CARDS HOVER */
+
 .card-1:hover {
     background-image: url(../image/cards/CARD-1-2-SERVICE.png);
     border: 5px solid #fff;
+    transition: 0.1s linear;
 }
-
 .card-2:hover {
     background-image: url(../image/cards/CARD-2-2-SERVICE.jpeg);
     border: 5px solid #fff;
+    transition: 0.1s linear;
 }
 
 .card-3:hover {
-    background-image: url(../image/cards/card-3-2.png);
+    background-image: url(../image/cards/CARD-3-2-SERVICE.jpg);
     border: 5px solid #fff;
+    transition: 0.1s linear;
 }
 
 .card-4:hover {
     background-image: url(../image/cards/CARD-4-2-SERVICE.png);
     border: 5px solid #fff;
+    transition: 0.1s linear;
 }
 .card-5:hover {
     background-image: url(../image/cards/CARD-5-2-SERVICE.png);
     border: 5px solid #fff;
+    transition: 0.1s linear;
 }
 .line {
     width: 30%;
@@ -344,7 +362,7 @@ margin-left: 100px;
 }
 .card__header {
     text-align: left;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 350;
     color: white;
     padding-left: 15px;
@@ -352,6 +370,7 @@ margin-left: 100px;
 
 .texto {
     font-size: 18px;
+    padding: 10px;
     font-weight: 600;
     color: white;
     font-weight: 300;
@@ -368,7 +387,7 @@ margin-left: 100px;
     height: 100vh;
     flex-direction: row;
     background-color: #ffffffea;
-
+    overflow-x: hidden;
 }
 
 .section__container-left {
