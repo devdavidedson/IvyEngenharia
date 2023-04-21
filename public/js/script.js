@@ -67,3 +67,21 @@ showSlide(currentSlide);
 
 var copy = document.querySelector(".portfolio__carrocel").cloneNode(true);
 document.querySelector(".portfolio").appendChild(copy);
+
+// Botão TOPO
+
+document.getElementById("voltar-ao-topo").addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+var btnVoltarAoTopo = document.getElementById("voltar-ao-topo");
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 600) {
+    btnVoltarAoTopo.style.display = "block";
+  } else {
+    btnVoltarAoTopo.style.display = "none";
+  }
+});
