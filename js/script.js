@@ -61,3 +61,9 @@ function nextSlide() {
 }
 
 showSlide(currentSlide);
+
+
+// CÓPIA PARA O CARROCEL FUNCIONAR
+
+var copy = document.querySelector(".portfolio__carrocel").cloneNode(true);
+document.querySelector(".portfolio").appendChild(copy);
