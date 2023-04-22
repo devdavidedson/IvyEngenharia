@@ -164,7 +164,7 @@ margin-left: 100px;
     width: 100%;
     height: 400px;
 }
-  
+
 .slide {
     position: absolute;
     top: 0;
@@ -172,7 +172,7 @@ margin-left: 100px;
     width: 100%;
     height: 400px;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: 0.5s ease;
 }
   
 .slide.active {
@@ -184,26 +184,34 @@ margin-left: 100px;
     height: 400px;
     object-fit: cover;
 }
-  
-.slide-text {
+.slide-text-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    opacity: 0.9; 
+    background-color: var(--color-Mverde);
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 50% 50%); 
+}
+.slide-text {
+    width: 50%;
+    text-align: end;
 }
   
 .slide-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    content: "";
+    color: #fff;
+    font-size: 2rem;
+    margin: auto;
+    width: 500px;
+    z-index: 11;
 }
   
-  .slide-text p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
   
 .prev,
 .next {
@@ -219,7 +227,7 @@ margin-left: 100px;
     border: none;
     outline: none;
     cursor: pointer;
-    z-index: 2;
+    z-index: 12;
 }
 
   
@@ -244,6 +252,7 @@ margin-left: 100px;
     flex-direction: row;
     background-color: #ffffffea;
     overflow-x: hidden;
+    margin-top: 60px;
 }
 
 .section__container-left {
@@ -361,16 +370,31 @@ margin-left: 100px;
 
 .portfolio {
     width: 100%;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 20px;
     white-space: nowrap;
     display: flex;
-    align-items: center;
     position: relative;
+    margin-bottom: 50px;
 }
 
-
+.portfolio__text {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    max-width: 100%;
+    font-size: 3rem;
+    margin: auto;
+    margin-top: 50px;
+}
+.portfolio__text h1{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--color-azul);
+}
 .portfolio::before,
 .portfolio::after {
     position: absolute;
@@ -391,8 +415,9 @@ margin-left: 100px;
 }
 
 .portfolio__carrocel {
-    animation: slide 25s infinite linear;
+    animation: slide 35s infinite linear;
     display: inline-block;
+    margin-top: auto;
 }
 
 .portfolio__carrocel img {
@@ -587,11 +612,12 @@ margin-left: 100px;
     max-width: 100%;
     height: 95vh;
     background-repeat: no-repeat;
+    background-position: left;
     background-size: cover;
     clip-path: polygon(1% 1%, 99% 1%,99% 83%, 1% 94%,1% 1%);
     margin-top: 2rem;
     margin-bottom: -4rem;
-    background-image: url(../image/luan-estacao.png);
+    background-image: url(../image/background/imagem-trabalhe-conosco.png);
 }
 .contato {
     display: flex;

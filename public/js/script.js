@@ -20,7 +20,7 @@ Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
 // EFEITO SMOOTH ANGULO X
 
 const observer2 = new IntersectionObserver(entries2 => {
-     console.log(entries2)
+     // console.log(entries2)
 
     Array.from(entries2).forEach(entry2 => {
         if (entry2.intersectionRatio >= 1) {
