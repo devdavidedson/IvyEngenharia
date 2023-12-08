@@ -1,0 +1,169 @@
+:root {
+    --color-azul: #373753;
+    --color-verde: #98c1af;
+    --color-Mverde: #678276;
+    --color-cinza: #808080;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Material';
+    font-weight: 300;
+    padding-right: 3px;
+    max-width: 1600px;
+    margin: auto;
+    letter-spacing: -1px;
+}
+@keyframes gradient {
+    from {
+        background-position: 0 50%;  
+    }
+    to    {
+        background-position: 100% 50%;
+    }
+}
+/* Slogan Apresentação */
+
+.container__whos {
+    width: 100%;
+    height: 70vh;
+    background-image: url("../image/whosAre/bgc-whos.jpg");
+    background-size: 100% 130%;
+    background-repeat: no-repeat;
+    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.637);
+}
+
+.container__whos-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 50%;
+    padding-top: 30px;
+}
+
+.container__whos h1 {
+    font-size: 60px;
+    color: var(--color-verde);
+    padding: 15px 35px 15px 15px;
+    font-weight: 500;
+    border-radius: 3px;
+    background-color: #ffffff9f;
+    -webkit-text-stroke: 1px var(--color-Mverde);
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+}
+
+/* A EMPRESA */
+
+.container__whos-empresa {
+    display: flex;
+    width: 97%;
+    margin: auto;
+    border-radius: 10px;
+    height: 670px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-verde);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    animation: gradient 7s ease alternate infinite;
+    background: linear-gradient(-45deg, var(--color-verde), var(--color-cinza), var(--color-azul), var(--color-Mverde)) no-repeat;
+    background-size: 200% 200%;
+    -webkit-clip-path: polygon(0% 0, 90% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+.container__whos-empresa_text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    max-height: 700px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: url(../image/whosAre/bgc-whos-2.png);
+    background-size: 60% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8%;
+}
+.container__whos-empresa_text h1 {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: 400;
+    letter-spacing: .1em;
+}
+
+.p__maior {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.p__menor {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/*REFERENCIAL ESTRATÉGICO */
+
+.container__value {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.container__value h1{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: var(--color-Mverde);
+}
+.container__value-inner {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    color: var(--color-azul);
+}
+.container__value-inner_left {
+    width: 50%;
+    height: 300px;
+    margin-right: 20px;
+    padding: 20px;
+}
+.container__value-inner_rigth {
+    width: 50%;
+    height: 300px;
+    margin-left: 20px;
+    padding: 20px;
+}
+.value-h2 {
+    font-size: 40px;
+    letter-spacing: .2px;
+}
+.value-hr {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.value-p {
+    font-size: 25px;
+    letter-spacing: .2px;
+    padding: 15px;
+}
+

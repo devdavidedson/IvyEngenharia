@@ -7,6 +7,10 @@
 body {
     font-family: 'Material';
     font-weight: 300;
+    padding-right: 3px;
+    max-width: 1600px;
+    margin: auto;
+    letter-spacing: -1px;
 }
 
 .init-hidden {
@@ -29,7 +33,12 @@ body {
     transform: translateX(0);
 
 }
-
+.ellipsis::after {
+    content: "..."; /* Adiciona as reticências */
+    position: relative;
+    top: -1em; /* Posiciona as reticências acima do conteúdo oculto */
+    float: right; /* Alinha as reticências à direita */
+}
 .cut {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%,10% 50%, 0 0);
 }
@@ -148,9 +157,10 @@ nav a {
     justify-content: flex-end;
     width: 100%;
     padding: 10px;
-    font-size: 30px;
+    font-size: 20px;
     margin: 20px;
     flex: 1;
+    font-weight: 500;
 }
 .nav__menu li {
 list-style: none;
@@ -210,6 +220,7 @@ margin-left: 100px;
     margin: auto;
     width: 500px;
     z-index: 11;
+    font-weight: 400;
 }
   
   
@@ -305,18 +316,21 @@ margin-left: 100px;
     background-color: var(--color-Mverde); 
     color: white; 
     padding: 20px 24px; 
-    border: none; 
-    border-radius: 5px; 
-    font-size: 25px; 
+    font-size: 18px; 
+    font-weight: 500;
     cursor: pointer;
     margin: auto;
     margin-top: 40px;
+    letter-spacing: .1em;
 }
 .btn:hover {
     background-color: var(--color-azul);
     color: white;
-    transition:  0.3s linear;
+    transition:  0.1s ease;
     text-decoration: underline;
+}
+.btn:not(hover){
+    transition:  0.1s ease;
 }
 
 .section {
@@ -370,7 +384,7 @@ margin-left: 100px;
 
 .portfolio {
     width: 100%;
-    height: 300px;
+    height: 220px;
     overflow: hidden;
     padding: 20px;
     white-space: nowrap;
@@ -384,15 +398,15 @@ margin-left: 100px;
     width: 100%;
     flex: 1;
     max-width: 100%;
-    font-size: 3rem;
-    margin: auto;
+    font-size: 40px;
     margin-top: 50px;
 }
 .portfolio__text h1{
     width: 100%;
     max-width: 100%;
     height: 100%;
-    text-align: center;
+    padding-left: 50px;
+    font-weight: 500;
     color: var(--color-azul);
 }
 .portfolio::before,
@@ -438,13 +452,14 @@ margin-left: 100px;
 .sec_services-bar {
     width: 100%;
     height: 25vh;
-    background-color: var(--color-azul);
+    background: url(../image/faixas/servicos-solucoes.png);
     color: white;
     font-size: 60px;
     font-weight: 400;
     padding-top: 40px;
     padding-left: 100px;
     padding-bottom: 20px;
+    letter-spacing: .1em;
 }
 
 .sec_services-cards {
@@ -454,7 +469,6 @@ margin-left: 100px;
     display: flex;
     flex-direction: row;
 }
-
 
 .card-1 {
     width: 20%;
@@ -478,7 +492,7 @@ margin-left: 100px;
     padding: 10px;
     background-image: url(../image/cards/CARD-2-SERVICE.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
 } 
 .card-3 {
@@ -490,7 +504,7 @@ margin-left: 100px;
     padding: 10px;
     background-image: url(../image/cards/CARD-3-SERVIÇO.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
 } 
 .card-4 {
@@ -499,10 +513,10 @@ margin-left: 100px;
     max-height: 100%;
     flex-direction: column;
     display: flex;
-    padding: 10px;
-    background-image: url(../image/cards/CARD-4-SERVICE.png);
+    padding: 5px;
+    background-image: url(../image/cards/CARD4-1-SERVIÇOS.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
 }
 .card-5 {
@@ -511,10 +525,10 @@ margin-left: 100px;
     max-height: 100%;
     flex-direction: column;
     display: flex;
-    padding: 10px;
+    padding: 5px;
     background-image: url(../image/cards/CARD-5-SERVICE.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
 }
 
@@ -538,7 +552,7 @@ margin-left: 100px;
 }
 
 .card-4:hover {
-    background-image: url(../image/cards/CARD-4-2-SERVICE.png);
+    background-image: url(../image/cards/CARD4-SERVIÇO.png);
     border: 5px solid #fff;
     transition: 0.1s linear;
 }
@@ -558,21 +572,22 @@ margin-left: 100px;
 }
 .card__header {
     text-align: left;
-    font-size: 1.5em;
-    font-weight: 350;
+    font-size: 28px;
+    font-weight: 500;
     color: white;
     padding-left: 15px;
+    letter-spacing: .1em;
 }
 
 .texto {
     font-size: 18px;
-    padding: 10px;
-    font-weight: 600;
+    padding: 20px 10px;
     color: white;
-    font-weight: 300;
-    margin-top: 50px;
-    overflow: hidden;
-
+    font-weight: 400;
+    margin-top: 40px;
+}
+.texto:hover {
+    margin-top: auto;
 }
 
 /* trabalhe conosco */
@@ -652,19 +667,22 @@ margin-left: 100px;
     justify-content: center;
     flex-direction: column;
     margin: auto;
-    gap: 25px;
+    gap: 20px;
 }
-.form__area input{
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 18px;
+.form__area h3 {
+    font-weight: 600;
+    letter-spacing: .2px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: var(--color-azul);
 }
+
 .form__area input {
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     border: none;
-    font-size: 18px;
+    font-size: 14px;
 }
 .form__area textarea {
     padding: 10px;
@@ -673,13 +691,13 @@ margin-left: 100px;
     border-radius: 5px;
 }
 .form__area button{
-    width: 170px;
-    height: 60px;
+    width: 140px;
+    height: 50px;
     justify-content: center;
     align-items: center;
     align-self: center;
     border-radius: 5px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Rubik';
     color: white;
     background-color: var(--color-azul);
@@ -830,3 +848,188 @@ footer {
 .escondido {
     display: none;
 }
+
+/* SERVICES PAGE */
+.container__services {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    margin: auto;
+    margin-top: 30px;
+}
+.services1-left {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 3em;
+    font-size: 1.3em;
+    padding: 100px;
+    overflow: hidden;
+}
+.services1-left h2 {
+    margin-bottom: 15px;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: .1em;
+}
+.services1-rigth {
+    display: flex;
+    width: 50%;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.services1-left ul {
+    list-style: disc inside;
+    padding: 30px;
+}
+.services1-left li {
+    padding-top: 5px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.sidebar-inner {
+    position: relative;
+  }
+  
+.sidebar-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px; /* Largura da barra lateral vertical */
+    height: 100%;
+    background-color: var(--color-azul); /* Cor da barra lateral */
+    transition: width 0.3s ease; /* Adicionando a transição suave */
+}
+  
+.services1-left:hover .sidebar-bar {
+    width: 100%;
+}
+
+.sidebar-paragraph {
+    text-align: left;
+    padding: 35px;
+    color: var(--color-verde);
+    opacity: 0;
+    transition-delay: 0s;
+    transition: opacity 2s ease 0s; /* Adicionando o valor 0s ao tempo de transição */
+}
+  
+.services1-left:hover .sidebar-paragraph {
+    opacity: 1;
+}
+.services1-left:not(:hover) .sidebar-paragraph {
+    opacity: 0;
+    transition: opacity 0s; /* Adicionando o valor 0s ao tempo de transição */
+}
+
+
+.services1-rigth img {
+    width: 65%;
+}
+  
+  
+/*CONTAINER SERVICES 2 */
+
+.container_services-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 30px;
+    position: relative; /* Adicionando posicionamento relativo */
+
+}
+  
+.container_services-2 img {
+max-width: 100%;
+width: 100%;
+height: auto;
+z-index: 1; /* Definindo z-index para colocar a imagem atrás do conteúdo */
+background-attachment: fixed;
+}
+  
+.services1-left2 {
+    display: flex;
+    width: 50%;
+    font-size: 1.3em;
+    overflow: hidden;
+    position: absolute; /* Mudando para posicionamento absoluto */
+    left: 0; /* Posicionando à esquerda do container_services-2 */
+    z-index: 2;
+    flex-direction: column;
+    align-items: left;
+}
+  
+.services1-left2 h2 {
+    margin-bottom: 15px;
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: .1em;
+}
+  
+.services1-left2 ul {
+    list-style: disc inside;
+    margin-top: 30px;
+}
+.services1-left2 li {
+    padding-top: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.sidebar-inner2 {
+    background-color: white;
+    margin: auto;
+    align-items: flex-start;
+    width: 100%;
+    height: 400px;
+    z-index: 3; /* Colocando o z-index acima dos outros elementos */
+    margin-left: 150px;
+    padding-left: 50px;
+}
+
+.sidebar-bar2 {
+    position: absolute;
+    top: 0;
+    left: 140px;
+    width: 30px; /* Largura da barra lateral vertical */
+    height: 100%;
+    background-color: var(--color-Mverde); /* Cor da barra lateral */
+    transition: width 0.3s ease; /* Adicionando a transição suave */
+}
+.services1-left2:hover .sidebar-bar2 {
+    width: 100%;
+}
+  
+.sidebar-paragraph2 {
+    padding: 35px;
+    color: var(--color-verde);
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-Mverde);
+    z-index: 2; /* Colocando o z-index abaixo da lista */
+    padding-right: 150px;
+    font-size: 1.2em;
+}
+
+  
+.services1-left2:hover .sidebar-paragraph2 {
+    opacity: 1;
+    transition-delay: 0s;
+    transition: opacity 2.5s ease 0s; /* Adicionando o valor 0s ao tempo de transição */
+}
+.services1-left2:not(hover) .sidebar-paragraph2 {
+    opacity: 0;
+    transition: opacity 0s; /* Adicionando o valor 0s ao tempo de transição */
+}
+   
+  
+  
+  

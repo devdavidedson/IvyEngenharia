@@ -57,7 +57,7 @@ function prevSlide() {
 function nextSlide() {
   clearInterval(slideInterval);
   showSlide(currentSlide + 1);
-  slideInterval = setInterval(nextSlide, 5000);
+  slideInterval = setInterval(nextSlide, 7000);
 }
 
 showSlide(currentSlide);
@@ -85,3 +85,4 @@ window.addEventListener("scroll", function() {
     btnVoltarAoTopo.style.display = "none";
   }
 });
+
